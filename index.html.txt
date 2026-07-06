@@ -1,0 +1,329 @@
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <title>【同業特化】初めての整骨院・整体院ホームページ制作代行</title>
+    <meta name="description" content="現役院長が作る、整骨院・整体院のためのHP制作代行。初期費用5万円（着手金3万/納品後2万）＋月額3千円の安心サポート。独自ドメイン無料で開業の負担を極限まで減らします。">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Shippori Mincho"', 'serif'],
+                    },
+                    colors: {
+                        navy: {
+                            DEFAULT: '#1e3a8a', // 信頼感のある濃紺
+                            dark: '#172554',
+                        },
+                        gold: {
+                            DEFAULT: '#d97706', // 権威性を示すゴールド/オレンジ
+                            light: '#fcd34d',
+                        },
+                        accent: '#ef4444', // 注意を引く赤
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* ストライプ背景 */
+        .bg-stripe {
+            background-image: repeating-linear-gradient(-45deg, #f8fafc, #f8fafc 10px, #ffffff 10px, #ffffff 20px);
+        }
+        /* チェックマークリスト */
+        .check-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.75rem;
+            font-weight: bold;
+            color: #333;
+        }
+        .check-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #ef4444;
+            font-size: 1.2rem;
+            font-weight: 900;
+        }
+        /* ふきだし風 */
+        .balloon {
+            position: relative;
+        }
+        .balloon::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            margin-left: -10px;
+            border-width: 10px 10px 0 10px;
+            border-style: solid;
+            border-color: #1e3a8a transparent transparent transparent;
+        }
+        .btn-pulse { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(6, 199, 85, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(6, 199, 85, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(6, 199, 85, 0); }
+        }
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800 pb-24">
+
+    <div class="max-w-md mx-auto bg-white shadow-xl overflow-hidden relative">
+
+        <!-- トップヘッダー -->
+        <header class="bg-white flex justify-between items-center p-2 border-b border-gray-200">
+            <div class="leading-tight">
+                <p class="text-[9px] text-gray-500 font-bold">整骨院・整体院専門のHP制作</p>
+                <h1 class="text-sm font-black text-navy tracking-widest">院長おまかせWEB制作</h1>
+            </div>
+            <a href="#contact" class="bg-[#06c755] text-white text-[10px] font-bold py-1.5 px-3 rounded flex items-center">
+                <span class="mr-1">💬</span>無料相談
+            </a>
+        </header>
+
+        <!-- ファーストビュー (王道LP風) -->
+        <section class="relative bg-gray-100 pb-8">
+            <!-- 上部権威性バッジ -->
+            <div class="bg-navy text-white text-center py-2 relative balloon z-10">
+                <p class="text-xs font-bold tracking-widest">祝・ご開業！HPの準備はできていますか？</p>
+            </div>
+            
+            <div class="relative">
+                <!-- ここに fv-bg.jpg を入れます -->
+                <img src="fv-bg.jpg" alt="" class="w-full h-64 object-cover object-top opacity-90" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=fv-bg.jpg';">
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
+                
+                <!-- キャッチコピーエリア -->
+                <div class="absolute bottom-0 left-0 w-full px-4 pb-4">
+                    <p class="inline-block bg-accent text-white font-bold px-3 py-1 text-xs mb-2 shadow-md rounded-sm">
+                        現役院長が裏方で作る！
+                    </p>
+                    <h2 class="text-[26px] font-black leading-tight text-gray-900 mb-2 drop-shadow-md">
+                        <span class="text-navy">初期5万・月額3千円。</span><br>
+                        専門用語の原稿も<br>
+                        すべて<span class="text-accent text-3xl pb-1 border-b-4 border-accent inline-block">丸投げOK</span>
+                    </h2>
+                    <p class="text-xs font-bold text-gray-700">スマホ特化＆LINE予約直結で集客を最大化</p>
+                </div>
+            </div>
+
+            <!-- 特典バッジ -->
+            <div class="mx-4 mt-4 bg-yellow-50 border-2 border-gold rounded-lg p-3 shadow-md relative">
+                <div class="absolute -top-3 left-4 bg-gold text-white text-[10px] font-bold px-2 py-0.5 rounded">
+                    開業応援プレゼント
+                </div>
+                <p class="font-bold text-center text-gray-900 text-sm mt-1">
+                    お店の名前が入った<br>
+                    <span class="text-accent text-xl font-black">「独自ドメイン」無料！</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- 悩み共感セクション -->
+        <section class="py-10 px-4 bg-stripe">
+            <h2 class="text-center font-bold text-xl mb-6 text-gray-900 relative">
+                <span class="absolute top-1/2 left-0 w-full h-px bg-gray-300 -z-10"></span>
+                <span class="bg-gray-50 px-3">開業準備でこんな<span class="text-accent">お悩み</span><br>ありませんか？</span>
+            </h2>
+            
+            <!-- ここに worry.jpg を入れます -->
+            <div class="mb-5 rounded-lg overflow-hidden border-2 border-white shadow-md">
+                <img src="worry.jpg" alt="" class="w-full h-auto" onerror="this.src='https://placehold.co/800x500/cbd5e1/475569?text=worry.jpg';">
+            </div>
+
+            <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                <ul class="check-list text-sm">
+                    <li>業者に見積もりを出したら、初期費用30万＋月額2万と言われ驚いた</li>
+                    <li>「施術の内容を書いてください」と言われたが、書く時間がない</li>
+                    <li>自作しようとしたが、素人感が出てしまって納得いかない</li>
+                </ul>
+            </div>
+
+            <!-- 解決の矢印 -->
+            <div class="text-center my-6">
+                <div class="inline-block w-0 h-0 border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent border-t-[20px] border-t-navy"></div>
+            </div>
+
+            <div class="text-center bg-navy text-white p-6 rounded-lg shadow-lg">
+                <p class="text-gold-light font-bold text-sm mb-1">そのお悩み、すべて解決します！</p>
+                <p class="text-xl font-black mb-3">現役院長の私に<br>お任せください</p>
+                <p class="text-xs opacity-90 leading-relaxed text-left">私も昔、HP業者に高いお金を払って失敗しました。同業の先生には同じ思いをしてほしくありません。開業時の負担を極限まで減らし、効果の出るHPを提供します。</p>
+            </div>
+        </section>
+
+        <!-- 選ばれる3つの理由 (カード型レイアウト) -->
+        <section class="py-12 px-4 bg-white">
+            <h2 class="text-center font-black text-2xl text-navy mb-8 border-b-2 border-navy pb-3 inline-block mx-auto w-full">
+                当サービスが選ばれる<br><span class="text-accent text-3xl">3</span>つの理由
+            </h2>
+
+            <!-- 理由1 -->
+            <div class="mb-8">
+                <div class="bg-navy text-white font-bold px-4 py-2 inline-block rounded-t-lg text-sm">
+                    理由 01
+                </div>
+                <div class="bg-gray-50 border-2 border-navy rounded-b-lg rounded-tr-lg p-4 shadow-md">
+                    <h3 class="font-bold text-lg text-gray-900 mb-3 text-center border-b pb-2">初期5万・月額3千円の安心価格</h3>
+                    <img src="reason1.jpg" alt="" class="w-full h-40 object-cover rounded mb-3" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=reason1.jpg';">
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        高額なサーバー代は一切不要。月額3,000円の保守費用のみで、ドメイン・サーバーの維持から、写真差し替え等の更新作業（月2回まで）までしっかりサポートします。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 理由2 -->
+            <div class="mb-8">
+                <div class="bg-navy text-white font-bold px-4 py-2 inline-block rounded-t-lg text-sm">
+                    理由 02
+                </div>
+                <div class="bg-gray-50 border-2 border-navy rounded-b-lg rounded-tr-lg p-4 shadow-md">
+                    <h3 class="font-bold text-lg text-gray-900 mb-3 text-center border-b pb-2">同業だから「専門用語丸投げOK」</h3>
+                    <img src="reason2.jpg" alt="" class="w-full h-40 object-cover rounded mb-3" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=reason2.jpg';">
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        筋膜リリース、骨盤矯正など、業者にイチから説明する苦労はゼロ！先生の得意な施術をヒアリングするだけで、私が患者さんに刺さる文章を代筆します。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 理由3 -->
+            <div class="mb-8">
+                <div class="bg-navy text-white font-bold px-4 py-2 inline-block rounded-t-lg text-sm">
+                    理由 03
+                </div>
+                <div class="bg-gray-50 border-2 border-navy rounded-b-lg rounded-tr-lg p-4 shadow-md">
+                    <h3 class="font-bold text-lg text-gray-900 mb-3 text-center border-b pb-2">スマホ特化＆LINE予約直結</h3>
+                    <img src="reason3.jpg" alt="" class="w-full h-40 object-cover rounded mb-3" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=reason3.jpg';">
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        患者さんの9割はスマホ検索です。無駄なページは削り、スマホで読みやすく、ワンタップでLINE予約に直結する「集客特化型LP」を制作します。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 料金プラン (目立たせる) -->
+        <section class="py-10 px-4 bg-blue-50">
+            <h2 class="text-center font-black text-2xl text-navy mb-6">料金プラン</h2>
+            
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden border-2 border-navy">
+                <div class="bg-navy text-white text-center py-4">
+                    <p class="font-bold text-lg tracking-widest">基本制作費用<span class="text-xs font-normal">（初期のみ）</span></p>
+                </div>
+                <div class="p-6 text-center">
+                    <p class="text-5xl font-black text-accent my-2">50,000<span class="text-xl font-bold">円</span><span class="text-sm font-normal text-gray-500">(税込)</span></p>
+                    
+                    <div class="inline-block bg-yellow-100 text-yellow-800 text-xs font-bold px-3 py-1.5 rounded mt-2 mb-4">
+                        ✨ 安心の2回払い（着手金3万 / 納品後2万）
+                    </div>
+                    
+                    <ul class="text-left text-sm space-y-2 font-bold text-gray-800 border-t border-gray-200 pt-5 mt-2">
+                        <li><span class="text-accent mr-1">✓</span>スマホ特化LP制作（縦長1ページ）</li>
+                        <li><span class="text-accent mr-1">✓</span>専門用語OK！文章作成代行</li>
+                        <li class="bg-yellow-50 p-1 text-accent"><span class="mr-1">✓</span>【特典】独自ドメイン取得・設定費無料</li>
+                        <li><span class="text-accent mr-1">✓</span>サーバー初期設定</li>
+                        <li><span class="text-accent mr-1">✓</span>LINE予約ボタン設置</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-100 border-t-2 border-gray-200 p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <p class="font-bold text-gray-800 text-sm">月額保守サポート（必須）</p>
+                        <p class="text-2xl font-black text-navy">3,000<span class="text-sm">円/月</span></p>
+                    </div>
+                    <ul class="text-[11px] text-gray-600 leading-relaxed mb-3">
+                        <li>・ドメイン更新料、サーバー維持費</li>
+                        <li>・<span class="font-bold text-accent">月2回までの修正作業（LINE依頼OK）</span></li>
+                    </ul>
+                    <div class="bg-white p-2 rounded text-[10px] text-gray-500">
+                        【無料修正例】テキスト変更、写真差し替え<br>
+                        【別途見積り】デザイン根本変更、ページ追加等
+                    </div>
+                </div>
+            </div>
+
+            <!-- オプション -->
+            <div class="mt-4 bg-white border border-gray-300 rounded-lg p-4 shadow-sm text-center">
+                <p class="font-bold text-sm text-gray-800 mb-1">公式LINE アカウント開設・設定代行</p>
+                <p class="text-xl font-black text-navy">+10,000<span class="text-xs font-normal">円</span></p>
+                <p class="text-[10px] text-red-500 mt-1">※ご自身で設定しURLをお渡しいただける場合は「0円」</p>
+            </div>
+        </section>
+
+        <!-- 制作の流れ -->
+        <section class="py-10 px-6 bg-white">
+            <h2 class="text-center font-black text-xl text-navy mb-8 border-b border-gray-300 pb-2">ご依頼から公開までの流れ</h2>
+            
+            <div class="space-y-4">
+                <div class="flex border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                    <div class="bg-navy text-white font-black w-12 flex items-center justify-center text-xl shrink-0">1</div>
+                    <div class="p-3 bg-gray-50 flex-grow">
+                        <p class="font-bold text-sm mb-1 text-gray-900">LINEで無料相談・ヒアリング</p>
+                        <p class="text-[11px] text-gray-600">お気軽にご相談ください。得意な施術などをお伺いします。</p>
+                    </div>
+                </div>
+                <div class="flex border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                    <div class="bg-navy text-white font-black w-12 flex items-center justify-center text-xl shrink-0">2</div>
+                    <div class="p-3 bg-gray-50 flex-grow">
+                        <p class="font-bold text-sm mb-1 text-gray-900">ご契約・着手金のお支払い</p>
+                        <p class="text-[11px] text-gray-600"><span class="text-accent font-bold">着手金（3万円）</span>をお振込みいただき制作をスタート。</p>
+                    </div>
+                </div>
+                <div class="flex border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                    <div class="bg-navy text-white font-black w-12 flex items-center justify-center text-xl shrink-0">3</div>
+                    <div class="p-3 bg-gray-50 flex-grow">
+                        <p class="font-bold text-sm mb-1 text-gray-900">制作・ご確認（修正）</p>
+                        <p class="text-[11px] text-gray-600">写真素材をいただき制作します。完成前のデモをご確認いただきます。</p>
+                    </div>
+                </div>
+                <div class="flex border-2 border-accent rounded-lg overflow-hidden shadow-md bg-red-50">
+                    <div class="bg-accent text-white font-black w-12 flex items-center justify-center text-xl shrink-0">4</div>
+                    <div class="p-3 flex-grow">
+                        <p class="font-bold text-sm mb-1 text-accent">完成！残金お支払い・公開</p>
+                        <p class="text-[11px] text-gray-700"><span class="text-accent font-bold">残金（2万円）</span>をお振込み後、独自ドメインで公開します！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- フッター -->
+        <footer class="bg-navy-dark text-white py-10 px-6 text-center text-sm">
+            <p class="font-bold mb-4 tracking-widest text-lg">院長おまかせWEB制作</p>
+            <p class="text-xs text-gray-400">&copy; 2024 院長おまかせWEB制作 All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- スマホ追従型 LINE相談ボタン -->
+    <div id="contact" class="fixed bottom-0 left-0 w-full z-50 bg-white/95 backdrop-blur-sm border-t-2 border-gray-200 pb-safe shadow-[0_-10px_20px_rgba(0,0,0,0.1)]">
+        <div class="max-w-md mx-auto p-3 flex justify-center">
+            <a href="#" class="btn-pulse flex flex-col items-center justify-center w-full bg-[#06c755] text-white font-bold py-3 rounded-full shadow-lg transform transition active:scale-95">
+                <span class="text-lg leading-none mb-1 tracking-wide">💬 LINEで無料相談する</span>
+                <span class="text-[10px] leading-none opacity-90">ご質問だけでも大歓迎です！</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+```
